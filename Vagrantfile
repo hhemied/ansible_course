@@ -6,16 +6,16 @@ Vagrant.configure("2") do |config|
 
 
   # Controller Configuration
-  config.vm.define "ansctl" do |ansctl|
-    ansctl.vm.box = "centos/7"
-    ansctl.vm.network "public_network", ip: "192.168.0.100", bridge: "en0: Wi-Fi (Wireless)"    
-    ansctl.vm.hostname = "ansctl.lab.local"
-    ansctl.vm.provider "virtualbox" do |vm|
-      vm.name = "ansctl.lab.local"
-    end
-    #  scripts to run
-    ansctl.vm.provision "shell", path: "prov.sh"
-  end
+  # config.vm.define "ansctl" do |ansctl|
+  #   ansctl.vm.box = "centos/7"
+  #   ansctl.vm.network "public_network", ip: "192.168.0.100", bridge: "en0: Wi-Fi (Wireless)"    
+  #   ansctl.vm.hostname = "ansctl.lab.local"
+  #   ansctl.vm.provider "virtualbox" do |vm|
+  #     vm.name = "ansctl.lab.local"
+  #   end
+  #   #  scripts to run
+  #   ansctl.vm.provision "shell", path: "prov.sh"
+  # end
 
   # Node02 Configuration
   config.vm.define "ans01" do |ans01|
